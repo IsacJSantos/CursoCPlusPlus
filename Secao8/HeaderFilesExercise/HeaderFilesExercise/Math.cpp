@@ -18,7 +18,7 @@ int Multiply(int a, int b)
 
 float Divide(int a, int b)
 {
-	return a / b;
+	return (float)a / (float)b;
 }
 
 
