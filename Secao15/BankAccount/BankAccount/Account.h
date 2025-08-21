@@ -12,6 +12,9 @@ private:
 	double balance{ 0 };
 
 public:
+	Account();
+	Account(std::string bank, int agency, int accountNumber, std::string owner, double balance);
+
 	bool Withdraw(double value);
 	void Deposit(double value);
 	void Transfer(Account &destiny, double value);

@@ -1,5 +1,23 @@
 #include "Account.h";
 
+Account::Account()
+{
+	this->bank = "";
+	this->agency = 0;
+	this->accountNumber = 0;
+	this->owner = "";
+	this->balance = 0;
+}
+
+Account::Account(std::string bank, int agency, int accountNumber, std::string owner, double balance)
+{
+	this->bank = bank;
+	this->agency = agency;
+	this->accountNumber = accountNumber;
+	this->owner = owner;
+	this->balance = balance;
+}
+
 bool Account::Withdraw(double value)
 {
 	if (balance < value)
@@ -20,7 +38,7 @@ void Account::Deposit(double value)
 	std::cout << "\nDeposito de R$" << value << " efetuado com sucesso!\n";
 }
 
-void Account::Transfer(Account &destiny, double value)
+void Account::Transfer(Account& destiny, double value)
 {
 	if (balance < value)
 	{

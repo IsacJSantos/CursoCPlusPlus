@@ -3,15 +3,8 @@
 
 int main()
 {
-	Account account01;
+	Account account01("Bradesco", 1234, 9999, "Isac", 14690);
 	Account account02;
-
-	account01.SetBank("Bradesco");
-	account01.SetAgency(1234);
-	account01.SetAccountNumber(9999);
-	account01.SetOwner("Isac");
-	account01.Deposit(14690);
-	account01.Withdraw(1500);
 
 	account02.SetBank("Banco do Brasil");
 	account02.SetAgency(5678);
