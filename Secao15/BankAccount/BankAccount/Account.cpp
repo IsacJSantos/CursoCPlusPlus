@@ -2,6 +2,7 @@
 
 Account::Account()
 {
+	std::cout << "\Construtor Objeto Endereco: " << this << " executado.\n";
 	this->bank = "";
 	this->agency = 0;
 	this->accountNumber = 0;
@@ -11,11 +12,17 @@ Account::Account()
 
 Account::Account(std::string bank, int agency, int accountNumber, std::string owner, double balance)
 {
+	std::cout << "\Construtor Objeto Endereco: " << this << " executado.\n";
 	this->bank = bank;
 	this->agency = agency;
 	this->accountNumber = accountNumber;
 	this->owner = owner;
 	this->balance = balance;
+}
+
+Account::~Account()
+{
+	std::cout << "\nDestrutor Objeto Endereco: " << this << " executado.\n";
 }
 
 bool Account::Withdraw(double value)
