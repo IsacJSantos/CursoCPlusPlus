@@ -1,22 +1,34 @@
 #include <iostream>
-
+static int counter;
 struct Data
 {
 	// Em structs, por padrão o modificador de acesso é public, diferentemente das classes
-	int Day;
-	int Month;
-	int Year;
+	int id;
+	int Day{ 0 };
+	int Month{ 0 };
+	int Year{ 0 };
+	Data()
+	{
+		id = ++counter;
+		std::cout << "Construtor de Data(" << id << ") executado.\n";
+	}
+
+	~Data() { std::cout << "Destrutor de Data(" << id << ") executado.\n"; }
 };
 
 int main()
 {
 
 	Data data;
-	data.Day = 22;
-	data.Month = 07;
-	data.Year = 2013;
 
-	std::cout << "Dia: " << data.Day << " Month: " << data.Month << " Year: " << data.Year << "\n";
+	// Criando um novo escopo
+	{
+		Data* data2 = new Data();
+		// Por se tratar de um ponteiro e estar na HEAP, é necessário fazer a remoçao manualmente
+		delete(data2);
+	}
+
+	Data data3;
 
 	system("pause");
 }
