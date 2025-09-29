@@ -4,10 +4,16 @@
 class Aluno :public Pessoa
 {
 public:
-	std::string curso;
+	
 	void RealizarProva();
+	void MostrarDados();
 
 	Aluno() :Pessoa(), curso("") {}
 	Aluno(std::string nome, int cpf, int matricula, std::string curso) : Pessoa(nome, cpf, matricula), curso(curso) {}
+
+	std::string GetCurso();
+	void SetCurso(std::string curso);
+private:
+	std::string curso;
 };
 

@@ -9,6 +9,9 @@ void main()
 	Aluno luke("Luke", 14585658745, 12358, "C++ Na Pratica");
 	Bibliotecario ObiWan("ObiWan", 14565841525, 12345);
 
-	isac.AcessarSystema();
+	isac.MostrarDados();
+	luke.MostrarDados();
+	ObiWan.MostrarDados();
+
 	system("pause");
 }
